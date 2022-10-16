@@ -27,3 +27,8 @@ RuntimeError: Role name '' is invalid. Maybe you are trying to call 'mindspore.c
 ----------------------------------------------------
 mindspore/ccsrc/distributed/cluster/cluster_context.cc:186 InitNodeRole
 ```
+
+### 2022/10/16
+
+跑通静态图多卡训练及py_native混合编程训练,但在val_while_train模式下会报错,
+报错日志在log/train_log.txt可见

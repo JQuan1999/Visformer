@@ -6,7 +6,7 @@ from typing import List
 import numpy as np
 
 import mindspore
-from mindspore import nn, ops
+from mindspore import nn, ops, Tensor
 from mindspore.common.initializer import initializer, HeNormal, Constant, TruncatedNormal
 
 from .utils import load_pretrained, _ntuple
@@ -61,8 +61,13 @@ class BatchNorm(nn.Cell):
 
 
 class Mlp(nn.Cell):
-    def __init__(self, in_features, hidden_features=None, out_features=None,
-                 act_layer=nn.GELU, drop=0., group=8, spatial_conv=False):
+    def __init__(self, in_features: int,
+                 hidden_features: int = None,
+                 out_features: int = None,
+                 act_layer: nn.Cell = nn.GELU,
+                 drop: float = 0.,
+                 group: int = 8,
+                 spatial_conv: bool = False):
         super(Mlp, self).__init__()
         out_features = out_features or in_features
         hidden_features = hidden_features or in_features
@@ -84,7 +89,7 @@ class Mlp(nn.Cell):
             self.act2 = act_layer()
         self.conv3 = nn.Conv2d(hidden_features, out_features, 1, 1, pad_mode='pad', padding=0)
 
-    def construct(self, x):
+    def construct(self, x: Tensor):
         x = self.conv1(x)
         x = self.act1(x)
         x = self.drop(x)
@@ -99,8 +104,14 @@ class Mlp(nn.Cell):
 
 
 class Attention(nn.Cell):
-    def __init__(self, dim, num_heads=8, head_dim_ratio=1., qkv_bias=False, qk_scale=None,
-                 attn_drop=0., proj_drop=0.):
+    def __init__(self,
+                 dim: int,
+                 num_heads: int = 8,
+                 head_dim_ratio: float = 1.,
+                 qkv_bias: bool = False,
+                 qk_scale: float = None,
+                 attn_drop: float = 0.,
+                 proj_drop: float = 0.):
         super(Attention, self).__init__()
         self.dim = dim
         self.num_heads = num_heads
@@ -115,7 +126,7 @@ class Attention(nn.Cell):
         self.proj = nn.Conv2d(self.head_dim * self.num_heads, dim, 1, 1, pad_mode='pad', padding=0)
         self.proj_drop = nn.Dropout(1 - proj_drop)
 
-    def construct(self, x):
+    def construct(self, x: Tensor):
         B, C, H, W = x.shape
         qkv = self.qkv(x).reshape((-1, 3, self.num_heads, self.head_dim, H, W))
         qkv = qkv.transpose((1, 0, 2, 4, 5, 3)).reshape((3, B, self.num_heads, -1, self.head_dim))
@@ -133,9 +144,21 @@ class Attention(nn.Cell):
 
 
 class Block(nn.Cell):
-    def __init__(self, dim, num_heads, head_dim_ratio=1., mlp_ratio=4., qkv_bias=False, qk_scale=None,
-                 drop=0., attn_drop=0., drop_path=0., act_layer=nn.GELU, norm_layer=LayerNorm,
-                 group=8, attn_disabled=False, spatial_conv=False):
+    def __init__(self,
+                 dim: int,
+                 num_heads: int,
+                 head_dim_ratio: float = 1.,
+                 mlp_ratio: float = 4.,
+                 qkv_bias: bool = False,
+                 qk_scale: float = None,
+                 drop: float = 0.,
+                 attn_drop: float = 0.,
+                 drop_path: float = 0.,
+                 act_layer: nn.Cell = nn.GELU,
+                 norm_layer: LayerNorm = LayerNorm,
+                 group: int = 8,
+                 attn_disabled: bool = False,
+                 spatial_conv: bool = False):
         super(Block, self).__init__()
         self.attn_disabled = attn_disabled
         self.spatial_conv = spatial_conv
@@ -150,7 +173,7 @@ class Block(nn.Cell):
         self.mlp = Mlp(in_features=dim, hidden_features=mlp_hidden_dim, act_layer=act_layer, drop=drop,
                        group=group, spatial_conv=spatial_conv)
 
-    def construct(self, x):
+    def construct(self, x: Tensor):
         if not self.attn_disabled:
             x = x + self.drop_path(self.attn(self.norm1(x)))
         x = x + self.drop_path(self.mlp(self.norm2(x)))
@@ -172,12 +195,13 @@ class PatchEmbed(nn.Cell):
         self.img_size = img_size
         self.patch_size = patch_size
         self.num_patches = num_patches
-        self.proj = nn.Conv2d(in_chans, embed_dim, kernel_size=patch_size, stride=patch_size, pad_mode='pad', padding=0)
+        self.proj = nn.Conv2d(in_chans, embed_dim, kernel_size=patch_size, stride=patch_size, pad_mode='pad', padding=0,
+                              has_bias=True)
         self.norm_pe = norm_layer is not None
         if self.norm_pe:
             self.norm = norm_layer(embed_dim)
 
-    def construct(self, x):
+    def construct(self, x: Tensor):
         B, C, H, W = x.shape
         if H != self.img_size[0] and W != self.img_size[1]:
             raise Exception(f"Input image size ({H}*{W}) does not match model ({self.img_size[1]}*{self.img_size[1]}).")
@@ -202,9 +226,9 @@ class Visformer(nn.Cell):
                  attn_drop_rate: float = 0.,
                  drop_path_rate: float = 0.,
                  norm_layer: LayerNorm = LayerNorm,
-                 attn_stage: str = '111',
+                 attn_stage: str = '1111',
                  pos_embed: bool = True,
-                 spatial_conv: str = '111',
+                 spatial_conv: str = '1111',
                  group: int = 8,
                  pool: bool = True,
                  conv_init: bool = False,
@@ -216,6 +240,7 @@ class Visformer(nn.Cell):
         self.img_size = img_size
         self.pool = pool
         self.conv_init = conv_init
+        self.depth = depth
         assert (isinstance(depth, list) or isinstance(depth, tuple)) and len(depth) == 4
         if not (isinstance(num_heads, list) or isinstance(num_heads, tuple)):
             num_heads = [num_heads] * 4
@@ -230,25 +255,34 @@ class Visformer(nn.Cell):
         ])
         img_size //= 2
 
+        self.pos_drop = nn.Dropout(1 - drop_rate)
         # stage0
-        self.patch_embed0 = PatchEmbed(img_size=img_size, patch_size=2, in_chans=self.init_channels,
-                                       embed_dim=embed_dim // 4, norm_layer=embedding_norm)
-        img_size //= 2
-        if self.pos_embed:
-            self.pos_embed0 = mindspore.Parameter(ops.zeros((1, embed_dim // 4, img_size, img_size), mindspore.float32))
-            self.pos_drop = nn.Dropout(1 - drop_rate)
-        self.stage0 = nn.CellList([
-            Block(dim=embed_dim // 4, num_heads=num_heads[0], head_dim_ratio=0.25, mlp_ratio=mlp_ratio,
-                  qkv_bias=qkv_bias,
-                  qk_scale=qk_scale, drop=drop_rate, attn_drop=attn_drop_rate, drop_path=dpr[i], norm_layer=norm_layer,
-                  group=group, attn_disabled=(attn_stage[0] == '0'), spatial_conv=(spatial_conv[0] == '1'))
-            for i in range(depth[0])
-        ])
+        if depth[0]:
+            self.patch_embed0 = PatchEmbed(img_size=img_size, patch_size=2, in_chans=self.init_channels,
+                                           embed_dim=embed_dim // 4, norm_layer=embedding_norm)
+            img_size //= 2
+            if self.pos_embed:
+                self.pos_embed0 = mindspore.Parameter(
+                    ops.zeros((1, embed_dim // 4, img_size, img_size), mindspore.float32))
+            self.stage0 = nn.CellList([
+                Block(dim=embed_dim // 4, num_heads=num_heads[0], head_dim_ratio=0.25, mlp_ratio=mlp_ratio,
+                      qkv_bias=qkv_bias,
+                      qk_scale=qk_scale, drop=drop_rate, attn_drop=attn_drop_rate, drop_path=dpr[i],
+                      norm_layer=norm_layer,
+                      group=group, attn_disabled=(attn_stage[0] == '0'), spatial_conv=(spatial_conv[0] == '1'))
+                for i in range(depth[0])
+            ])
 
         # stage1
-        self.patch_embed1 = PatchEmbed(img_size=img_size, patch_size=2, in_chans=embed_dim // 4,
-                                       embed_dim=embed_dim // 2, norm_layer=embedding_norm)
-        img_size //= 2
+        if depth[0]:
+            self.patch_embed1 = PatchEmbed(img_size=img_size, patch_size=2, in_chans=embed_dim // 4,
+                                           embed_dim=embed_dim // 2, norm_layer=embedding_norm)
+            img_size //= 2
+        else:
+            self.patch_embed1 = PatchEmbed(img_size=img_size, patch_size=4, in_chans=self.init_channels,
+                                           embed_dim=embed_dim // 2, norm_layer=embedding_norm)
+            img_size //= 4
+
         if self.pos_embed:
             self.pos_embed1 = mindspore.Parameter(ops.zeros((1, embed_dim // 2, img_size, img_size), mindspore.float32))
 
@@ -300,8 +334,9 @@ class Visformer(nn.Cell):
 
         # weight init
         if self.pos_embed:
-            self.pos_embed0.set_data(initializer(TruncatedNormal(0.02),
-                                                 self.pos_embed0.shape, self.pos_embed0.dtype))
+            if depth[0]:
+                self.pos_embed0.set_data(initializer(TruncatedNormal(0.02),
+                                                     self.pos_embed0.shape, self.pos_embed0.dtype))
             self.pos_embed1.set_data(initializer(TruncatedNormal(0.02),
                                                  self.pos_embed1.shape, self.pos_embed1.dtype))
             self.pos_embed2.set_data(initializer(TruncatedNormal(0.02),
@@ -331,16 +366,17 @@ class Visformer(nn.Cell):
                 if cell.bias is not None:
                     cell.bias.set_data(initializer(Constant(0), cell.bias.shape, cell.bias.dtype))
 
-    def construct(self, x):
+    def construct(self, x: Tensor):
         x = self.stem(x)
 
         # stage 0
-        x = self.patch_embed0(x)
-        if self.pos_embed:
-            x = x + self.pos_embed0
-            x = self.pos_drop(x)
-        for b in self.stage0:
-            x = b(x)
+        if self.depth[0]:
+            x = self.patch_embed0(x)
+            if self.pos_embed:
+                x = x + self.pos_embed0
+                x = self.pos_drop(x)
+            for b in self.stage0:
+                x = b(x)
 
         # stage 1
         x = self.patch_embed1(x)
@@ -382,8 +418,9 @@ def visformer_tiny(pretrained: bool = False,
                    in_channels: int = 3,
                    **kwargs):
     default_cfg = default_cfgs['visformer_tiny']
-    model = Visformer(img_size=224, init_channels=16, embed_dim=192, depth=[0, 7, 4, 4], num_heads=[3, 3, 3, 3], mlp_ratio=4.,
-                      group=8,attn_stage='0011', spatial_conv='1100', norm_layer=BatchNorm, conv_init=True,
+    model = Visformer(img_size=224, init_channels=16, embed_dim=192, depth=[0, 7, 4, 4], num_heads=[3, 3, 3, 3],
+                      mlp_ratio=4.,
+                      group=8, attn_stage='0011', spatial_conv='1100', norm_layer=BatchNorm, conv_init=True,
                       embedding_norm=BatchNorm, **kwargs)
     if pretrained:
         load_pretrained(model, default_cfg, num_classes=num_classes, in_channels=in_channels)
@@ -392,24 +429,43 @@ def visformer_tiny(pretrained: bool = False,
 
 
 @register_model
-def visformer_small(**kwargs):
-    model = Visformer(img_size=224, init_channels=32, embed_dim=384, depth=[0, 7, 4, 4], num_heads=[6, 6, 6, 6], mlp_ratio=4.,
+def visformer_small(pretrained: bool = False,
+                    num_classes: int = 1000,
+                    in_channels: int = 3,
+                    **kwargs):
+    default_cfg = default_cfgs['visformer_small']
+    model = Visformer(img_size=224, init_channels=32, embed_dim=384, depth=[0, 7, 4, 4], num_heads=[6, 6, 6, 6],
+                      mlp_ratio=4.,
                       group=8, attn_stage='0011', spatial_conv='1100', norm_layer=BatchNorm, conv_init=True,
                       embedding_norm=BatchNorm, **kwargs)
+    if pretrained:
+        load_pretrained(model, default_cfg, num_classes=num_classes, in_channels=in_channels)
     return model
 
 
 @register_model
-def visformer_small_v2(**kwargs):
+def visformer_small_v2(pretrained: bool = False,
+                       num_classes: int = 1000,
+                       in_channels: int = 3,
+                       **kwargs):
+    default_cfg = default_cfgs['visformer_small_v2']
     model = Visformer(img_size=224, init_channels=32, embed_dim=256, depth=[1, 10, 14, 3], num_heads=[2, 4, 8, 16],
                       mlp_ratio=4., group=8, attn_stage='0011', spatial_conv='1100', norm_layer=BatchNorm,
                       conv_init=True, embedding_norm=BatchNorm, **kwargs)
+    if pretrained:
+        load_pretrained(model, default_cfg, num_classes=num_classes, in_channels=in_channels)
     return model
 
 
 @register_model
-def visformer_tiny_v2(**kwargs):
+def visformer_tiny_v2(pretrained: bool = False,
+                      num_classes: int = 1000,
+                      in_channels: int = 3,
+                      **kwargs):
+    default_cfg = default_cfgs['visformer_tiny_v2']
     model = Visformer(img_size=224, init_channels=24, embed_dim=192, depth=[1, 4, 6, 2], num_heads=[1, 3, 6, 12],
                       mlp_ratio=4., group=8, attn_stage='0011', spatial_conv='1100', norm_layer=BatchNorm,
                       conv_init=True, embedding_norm=BatchNorm, **kwargs)
+    if pretrained:
+        load_pretrained(model, default_cfg, num_classes=num_classes, in_channels=in_channels)
     return model

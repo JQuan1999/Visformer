@@ -2,10 +2,11 @@
 mode: 0
 distribute: True
 num_parallel_workers: 8
+val_while_train: False
 
 # dataset config
 dataset: 'imagenet'
-data_dir: './imagenet'
+data_dir: '/home/mindspore/MIPT_team/Datasets/ImageNet'
 shuffle: True
 dataset_download: False
 batch_size: 64
@@ -18,12 +19,12 @@ mixup: 0.8
 
 
 # model config
-model: 'visformer_tiny'
+model: 'visformer_small'
 num_classes: 1000
 pretrained: False
 ckpt_path: ''
 keep_checkpoint_max: 10
-ckpt_save_dir: './'
+ckpt_save_dir: './ckpt'
 epoch_size: 300
 dataset_sink_mode: True
 amp_level: 'O2'

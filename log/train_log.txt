@@ -1,0 +1,429 @@
+[WARNING] MD(19348,7f33fb929740,python):2022-10-15-23:16:10.380.413 [mindspore/ccsrc/minddata/dataset/util/task.cc:162] Join] ImageFolderOp::WorkerEntry Thread ID 139851508737792 is not responding. Interrupt again
+epoch: 1 step: 2502, loss is 6.500506401062012
+Train epoch time: 2234463.234 ms, per step time: 893.071 ms
+epoch: 1 step: 2502, loss is 6.591518878936768
+Train epoch time: 2234438.619 ms, per step time: 893.061 ms
+epoch: 1 step: 2502, loss is 6.417922496795654
+Train epoch time: 2234489.329 ms, per step time: 893.081 ms
+epoch: 1 step: 2502, loss is 6.509988784790039
+Train epoch time: 2234162.455 ms, per step time: 892.951 ms
+epoch: 1 step: 2502, loss is 6.341297149658203
+Train epoch time: 2234647.213 ms, per step time: 893.144 ms
+epoch: 1 step: 2502, loss is 6.390387058258057
+Train epoch time: 2234659.062 ms, per step time: 893.149 ms
+epoch: 1 step: 2502, loss is 6.691767692565918
+epoch: 1 step: 2502, loss is 6.556976795196533
+Train epoch time: 2234783.012 ms, per step time: 893.199 ms
+Train epoch time: 2237184.483 ms, per step time: 894.158 ms
+[WARNING] DEVICE(19345,7f3850b3c700,python):2022-10-16-00:00:27.174.822 [mindspore/ccsrc/plugin/device/gpu/hal/device/gpu_data_queue.cc:91] Push] Detected that dataset is dynamic shape, it is suggested to call network.set_inputs() to configure dynamic dims of input data before running the network
+[WARNING] DEVICE(19343,7f89792a4700,python):2022-10-16-00:00:27.176.403 [mindspore/ccsrc/plugin/device/gpu/hal/device/gpu_data_queue.cc:91] Push] Detected that dataset is dynamic shape, it is suggested to call network.set_inputs() to configure dynamic dims of input data before running the network
+[WARNING] DEVICE(19350,7fb46933d700,python):2022-10-16-00:00:27.177.426 [mindspore/ccsrc/plugin/device/gpu/hal/device/gpu_data_queue.cc:91] Push] Detected that dataset is dynamic shape, it is suggested to call network.set_inputs() to configure dynamic dims of input data before running the network
+[WARNING] DEVICE(19344,7f030d7fa700,python):2022-10-16-00:00:27.177.773 [mindspore/ccsrc/plugin/device/gpu/hal/device/gpu_data_queue.cc:91] Push] Detected that dataset is dynamic shape, it is suggested to call network.set_inputs() to configure dynamic dims of input data before running the network
+[WARNING] DEVICE(19348,7f2babfff700,python):2022-10-16-00:00:27.178.362 [mindspore/ccsrc/plugin/device/gpu/hal/device/gpu_data_queue.cc:91] Push] Detected that dataset is dynamic shape, it is suggested to call network.set_inputs() to configure dynamic dims of input data before running the network
+[WARNING] DEVICE(19349,7f2582ffd700,python):2022-10-16-00:00:27.178.431 [mindspore/ccsrc/plugin/device/gpu/hal/device/gpu_data_queue.cc:91] Push] Detected that dataset is dynamic shape, it is suggested to call network.set_inputs() to configure dynamic dims of input data before running the network
+[WARNING] DEVICE(19346,7fc8e8ff9700,python):2022-10-16-00:00:27.179.495 [mindspore/ccsrc/plugin/device/gpu/hal/device/gpu_data_queue.cc:91] Push] Detected that dataset is dynamic shape, it is suggested to call network.set_inputs() to configure dynamic dims of input data before running the network
+[WARNING] DEVICE(19347,7f8ffd33d700,python):2022-10-16-00:00:27.183.112 [mindspore/ccsrc/plugin/device/gpu/hal/device/gpu_data_queue.cc:91] Push] Detected that dataset is dynamic shape, it is suggested to call network.set_inputs() to configure dynamic dims of input data before running the network
+Validation: Epoch: 1, Metrics: [Top_1_Accuracy:0.06473286]
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Save the best Top_1_Accuracy ckpt, the Top_1_Accuracy is 0.06473286
+--------------------------------------------------------------------------------
+epoch: 2 step: 2502, loss is 5.008647918701172
+epoch: 2 step: 2502, loss is 5.253540515899658
+Train epoch time: 2946834.884 ms, per step time: 1177.792 ms
+epoch: 2 step: 2502, loss is 4.961368083953857
+Train epoch time: 2946834.941 ms, per step time: 1177.792 ms
+epoch: 2 step: 2502, loss is 4.670049667358398
+Train epoch time: 2946837.938 ms, per step time: 1177.793 ms
+epoch: 2 step: 2502, loss is 5.08645486831665
+Train epoch time: 2946838.290 ms, per step time: 1177.793 ms
+epoch: 2 step: 2502, loss is 4.959097862243652
+Train epoch time: 2946842.243 ms, per step time: 1177.795 ms
+epoch: 2 step: 2502, loss is 5.046544075012207
+Train epoch time: 2946843.867 ms, per step time: 1177.795 ms
+epoch: 2 step: 2502, loss is 4.799906253814697
+Train epoch time: 2946833.895 ms, per step time: 1177.791 ms
+Train epoch time: 2936325.589 ms, per step time: 1173.591 ms
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [16,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [17,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [18,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [19,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [20,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [16,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [17,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [18,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [19,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [20,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [21,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [22,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [23,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [24,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [25,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [16,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [17,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [18,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [19,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [20,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [21,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [22,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [23,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [24,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel:37: GatherKernel: block: [0,0,0], thread: [21,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [22,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [23,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [24,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [25,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [26,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [27,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [28,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [29,0,0] Assertion `j_read < dim_at_axis_input: block: [0,0,0], thread: [25,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [26,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [30,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [31,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [32,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [33,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [34,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [35,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [36,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [37,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: block: [0,0,0], thread: [26,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [27,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [28,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [29,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [30,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [31,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [32,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [33,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [34,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu,0], thread: [27,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [28,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [29,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [30,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [31,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [32,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [33,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [34,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [35,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [36,0,0] Assertion `j_read < dim_at_axis_input` failed.
+:37: GatherKernel: block: [0,0,0], thread: [35,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [36,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [37,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [38,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [39,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [40,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [41,0,0] Assertion `j_read < dim_at_axis_input: GatherKernel: block: [0,0,0], thread: [38,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [39,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [40,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [41,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [42,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [43,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [44,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [45,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [46,0/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [37,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [38,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [39,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [40,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [41,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [42,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [43,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [47,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [48,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [49,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [50,0` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [42,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [43,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [44,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [45,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0,0], thread: [44,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [45,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [46,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [47,0,0] Assertion `j_read < dim_at_axis_input,0], thread: [46,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [47,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [48,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [49,0,0] Assertion `j_read < dim_at_axis_input` failed.
+,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [51,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [52,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [53,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [54,0,0] Assertion `j_read < dim_at_axis_input` failed.
+` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [48,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [49,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [50,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [51/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [55,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [56,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [57,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [58,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [59,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [50,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [51,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [52,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [53,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [54,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [52,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [53,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [54,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [55,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel], thread: [55,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [56,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [57,0,0], thread: [60,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [61,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [62,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [63,0: block: [0,0,0], thread: [56,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [57,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [58,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37,0] Assertion `j_read < dim_at_axis_input` failed.
+,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [58,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [59,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [60,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: GatherKernel: block: [0,0,0], thread: [59,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [60,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [61,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [62: block: [0,0,0], thread: [61,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [62,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [63,0,0] Assertion `j_read < dim_at_axis_input` failed.
+,0,0] Assertion `j_read < dim_at_axis_input` failed.
+/home/jenkins/agent-working-dir/workspace/Compile_GPU_X86_CentOS_Cuda11/mindspore/mindspore/ccsrc/plugin/device/gpu/kernel/cuda_impl/cuda_ops/gather.cu:37: GatherKernel: block: [0,0,0], thread: [63,0,0] Assertion `j_read < dim_at_axis_input` failed.
+[ERROR] DEVICE(19346,7fcf84ecd700,python):2022-10-16-00:55:02.016.654 [mindspore/ccsrc/plugin/device/gpu/hal/device/cuda_driver.cc:167] SyncStream] cudaStreamSynchronize failed, ret[710], device-side assert triggered
+[ERROR] DEVICE(19343,7f8ea5fff700,python):2022-10-16-00:55:02.016.686 [mindspore/ccsrc/plugin/device/gpu/hal/device/cuda_driver.cc:167] SyncStream] cudaStreamSynchronize failed, ret[710], device-side assert triggered
+[ERROR] DEVICE(19348,7f33c6d12700,python):2022-10-16-00:55:02.016.669 [mindspore/ccsrc/plugin/device/gpu/hal/device/cuda_driver.cc:167] SyncStream] cudaStreamSynchronize failed, ret[710], device-side assert triggered
+[WARNING] MD(19343,7f9034e62740,python):2022-10-16-00:55:04.357.514 [mindspore/ccsrc/minddata/dataset/engine/datasetops/device_queue_op.cc:75] ~DeviceQueueOp] preprocess_batch: 5007; batch_queue: 0, 0, 0, 0, 0, 0, 0, 0, 0, 16; push_start_time: 2022-10-16-00:49:27.271.567, 2022-10-16-00:49:27.672.149, 2022-10-16-00:49:29.482.600, 2022-10-16-00:49:30.334.490, 2022-10-16-00:49:31.025.971, 2022-10-16-00:49:32.089.669, 2022-10-16-00:49:33.455.973, 2022-10-16-00:49:34.328.602, 2022-10-16-00:49:34.809.900, 2022-10-16-00:49:35.615.533; push_end_time: 2022-10-16-00:49:27.271.666, 2022-10-16-00:49:27.672.222, 2022-10-16-00:49:29.482.702, 2022-10-16-00:49:30.334.583, 2022-10-16-00:49:31.026.082, 2022-10-16-00:49:32.089.764, 2022-10-16-00:49:33.456.073, 2022-10-16-00:49:34.329.776, 2022-10-16-00:49:34.809.972, 2022-10-16-00:55:04.254.924.
+[WARNING] MD(19348,7f33fb929740,python):2022-10-16-00:55:04.449.448 [mindspore/ccsrc/minddata/dataset/engine/datasetops/device_queue_op.cc:75] ~DeviceQueueOp] preprocess_batch: 5007; batch_queue: 15, 16, 15, 16, 14, 16, 15, 16, 15, 16; push_start_time: 2022-10-16-00:49:23.623.196, 2022-10-16-00:49:24.632.601, 2022-10-16-00:49:25.481.976, 2022-10-16-00:49:26.471.502, 2022-10-16-00:49:27.574.095, 2022-10-16-00:49:27.981.778, 2022-10-16-00:49:29.786.143, 2022-10-16-00:49:30.641.367, 2022-10-16-00:49:31.328.652, 2022-10-16-00:49:32.395.557; push_end_time: 2022-10-16-00:49:24.632.584, 2022-10-16-00:49:25.481.958, 2022-10-16-00:49:26.471.486, 2022-10-16-00:49:27.574.067, 2022-10-16-00:49:27.981.761, 2022-10-16-00:49:29.786.121, 2022-10-16-00:49:30.641.347, 2022-10-16-00:49:31.328.629, 2022-10-16-00:49:32.395.541, 2022-10-16-00:55:04.371.302.
+[WARNING] MD(19346,7fd102254740,python):2022-10-16-00:55:04.449.691 [mindspore/ccsrc/minddata/dataset/engine/datasetops/device_queue_op.cc:75] ~DeviceQueueOp] preprocess_batch: 5007; batch_queue: 15, 16, 15, 16, 15, 16, 15, 16, 15, 16; push_start_time: 2022-10-16-00:49:23.630.316, 2022-10-16-00:49:24.630.480, 2022-10-16-00:49:25.479.842, 2022-10-16-00:49:26.470.630, 2022-10-16-00:49:27.576.140, 2022-10-16-00:49:27.983.049, 2022-10-16-00:49:29.791.430, 2022-10-16-00:49:30.645.047, 2022-10-16-00:49:31.329.914, 2022-10-16-00:49:32.396.508; push_end_time: 2022-10-16-00:49:24.630.464, 2022-10-16-00:49:25.479.828, 2022-10-16-00:49:26.470.610, 2022-10-16-00:49:27.576.121, 2022-10-16-00:49:27.983.021, 2022-10-16-00:49:29.791.409, 2022-10-16-00:49:30.645.019, 2022-10-16-00:49:31.329.899, 2022-10-16-00:49:32.396.494, 2022-10-16-00:55:04.370.729.
+[ERROR] DEVICE(19343,7f9034e62740,python):2022-10-16-00:55:04.829.291 [mindspore/ccsrc/plugin/device/gpu/hal/device/cuda_driver.cc:167] SyncStream] cudaStreamSynchronize failed, ret[710], device-side assert triggered
+[ERROR] ME(19343,7f9034e62740,python):2022-10-16-00:55:04.829.323 [mindspore/ccsrc/runtime/hardware/device_context_manager.cc:89] WaitTaskFinishOnDevice] SyncStream failed
+[ERROR] DEVICE(19343,7f9034e62740,python):2022-10-16-00:55:04.923.633 [mindspore/ccsrc/plugin/device/gpu/hal/hardware/gpu_device_context.cc:174] Destroy] Op Error: Could not destroy gpu data queue. | Error Number: 0
+[ERROR] DEVICE(19343,7f9034e62740,python):2022-10-16-00:55:04.923.661 [mindspore/ccsrc/plugin/device/gpu/hal/device/cuda_driver.cc:158] DestroyStream] cudaStreamDestroy failed, ret[710], device-side assert triggered
+[ERROR] DEVICE(19343,7f9034e62740,python):2022-10-16-00:55:04.923.881 [mindspore/ccsrc/plugin/device/gpu/hal/device/gpu_device_manager.cc:60] ReleaseDevice] Op Error: Failed to destroy CUDA stream. | Error Number: 0
+[ERROR] DEVICE(19343,7f9034e62740,python):2022-10-16-00:55:04.923.900 [mindspore/ccsrc/plugin/device/gpu/hal/device/cuda_driver.cc:158] DestroyStream] cudaStreamDestroy failed, ret[710], device-side assert triggered
+[ERROR] DEVICE(19343,7f9034e62740,python):2022-10-16-00:55:04.923.905 [mindspore/ccsrc/plugin/device/gpu/hal/device/gpu_device_manager.cc:60] ReleaseDevice] Op Error: Failed to destroy CUDA stream. | Error Number: 0
+[ERROR] DEVICE(19348,7f33fb929740,python):2022-10-16-00:55:04.957.339 [mindspore/ccsrc/plugin/device/gpu/hal/device/cuda_driver.cc:167] SyncStream] cudaStreamSynchronize failed, ret[710], device-side assert triggered
+[ERROR] ME(19348,7f33fb929740,python):2022-10-16-00:55:04.957.370 [mindspore/ccsrc/runtime/hardware/device_context_manager.cc:89] WaitTaskFinishOnDevice] SyncStream failed
+[ERROR] DEVICE(19343,7f9034e62740,python):2022-10-16-00:55:04.981.609 [mindspore/ccsrc/plugin/device/gpu/hal/device/gpu_device_manager.cc:66] ReleaseDevice] cuDNN Error: Failed to destroy cuDNN handle | Error Number: 4 CUDNN_STATUS_INTERNAL_ERROR
+[ERROR] DEVICE(19346,7fd102254740,python):2022-10-16-00:55:04.987.152 [mindspore/ccsrc/plugin/device/gpu/hal/device/cuda_driver.cc:167] SyncStream] cudaStreamSynchronize failed, ret[710], device-side assert triggered
+[ERROR] ME(19346,7fd102254740,python):2022-10-16-00:55:04.987.186 [mindspore/ccsrc/runtime/hardware/device_context_manager.cc:89] WaitTaskFinishOnDevice] SyncStream failed
+[ERROR] DEVICE(19348,7f33fb929740,python):2022-10-16-00:55:05.038.466 [mindspore/ccsrc/plugin/device/gpu/hal/hardware/gpu_device_context.cc:174] Destroy] Op Error: Could not destroy gpu data queue. | Error Number: 0
+[ERROR] DEVICE(19348,7f33fb929740,python):2022-10-16-00:55:05.038.496 [mindspore/ccsrc/plugin/device/gpu/hal/device/cuda_driver.cc:158] DestroyStream] cudaStreamDestroy failed, ret[710], device-side assert triggered
+[ERROR] DEVICE(19348,7f33fb929740,python):2022-10-16-00:55:05.038.505 [mindspore/ccsrc/plugin/device/gpu/hal/device/gpu_device_manager.cc:60] ReleaseDevice] Op Error: Failed to destroy CUDA stream. | Error Number: 0
+[ERROR] DEVICE(19348,7f33fb929740,python):2022-10-16-00:55:05.038.512 [mindspore/ccsrc/plugin/device/gpu/hal/device/cuda_driver.cc:158] DestroyStream] cudaStreamDestroy failed, ret[710], device-side assert triggered
+[ERROR] DEVICE(19348,7f33fb929740,python):2022-10-16-00:55:05.038.516 [mindspore/ccsrc/plugin/device/gpu/hal/device/gpu_device_manager.cc:60] ReleaseDevice] Op Error: Failed to destroy CUDA stream. | Error Number: 0
+[ERROR] DEVICE(19348,7f33fb929740,python):2022-10-16-00:55:05.040.556 [mindspore/ccsrc/plugin/device/gpu/hal/device/gpu_device_manager.cc:66] ReleaseDevice] cuDNN Error: Failed to destroy cuDNN handle | Error Number: 4 CUDNN_STATUS_INTERNAL_ERROR
+[ERROR] DEVICE(19346,7fd102254740,python):2022-10-16-00:55:05.053.622 [mindspore/ccsrc/plugin/device/gpu/hal/hardware/gpu_device_context.cc:174] Destroy] Op Error: Could not destroy gpu data queue. | Error Number: 0
+[ERROR] DEVICE(19346,7fd102254740,python):2022-10-16-00:55:05.053.642 [mindspore/ccsrc/plugin/device/gpu/hal/device/cuda_driver.cc:158] DestroyStream] cudaStreamDestroy failed, ret[710], device-side assert triggered
+[ERROR] DEVICE(19346,7fd102254740,python):2022-10-16-00:55:05.053.650 [mindspore/ccsrc/plugin/device/gpu/hal/device/gpu_device_manager.cc:60] ReleaseDevice] Op Error: Failed to destroy CUDA stream. | Error Number: 0
+[ERROR] DEVICE(19346,7fd102254740,python):2022-10-16-00:55:05.053.656 [mindspore/ccsrc/plugin/device/gpu/hal/device/cuda_driver.cc:158] DestroyStream] cudaStreamDestroy failed, ret[710], device-side assert triggered
+[ERROR] DEVICE(19346,7fd102254740,python):2022-10-16-00:55:05.053.659 [mindspore/ccsrc/plugin/device/gpu/hal/device/gpu_device_manager.cc:60] ReleaseDevice] Op Error: Failed to destroy CUDA stream. | Error Number: 0
+[ERROR] DEVICE(19346,7fd102254740,python):2022-10-16-00:55:05.055.477 [mindspore/ccsrc/plugin/device/gpu/hal/device/gpu_device_manager.cc:66] ReleaseDevice] cuDNN Error: Failed to destroy cuDNN handle | Error Number: 4 CUDNN_STATUS_INTERNAL_ERROR
+[ERROR] DEVICE(19346,7fd102254740,python):2022-10-16-00:55:05.176.595 [mindspore/ccsrc/plugin/device/gpu/hal/device/cuda_driver.cc:48] FreeDeviceMem] cudaFree failed, ret[710], device-side assert triggered
+[ERROR] DEVICE(19343,7f9034e62740,python):2022-10-16-00:55:05.176.602 [mindspore/ccsrc/plugin/device/gpu/hal/device/cuda_driver.cc:48] FreeDeviceMem] cudaFree failed, ret[710], device-side assert triggered
+[ERROR] DEVICE(19346,7fd102254740,python):2022-10-16-00:55:05.176.611 [mindspore/ccsrc/plugin/device/gpu/hal/device/gpu_memory_allocator.cc:71] Finalize] Could not free buffer queue memory.
+[ERROR] DEVICE(19346,7fd102254740,python):2022-10-16-00:55:05.176.617 [mindspore/ccsrc/plugin/device/gpu/hal/device/gpu_device_manager.cc:78] ReleaseDevice] Op Error: Failed to destroy gpu memory allocator | Error Number: 0
+[ERROR] DEVICE(19343,7f9034e62740,python):2022-10-16-00:55:05.176.618 [mindspore/ccsrc/plugin/device/gpu/hal/device/gpu_memory_allocator.cc:71] Finalize] Could not free buffer queue memory.
+[ERROR] DEVICE(19343,7f9034e62740,python):2022-10-16-00:55:05.176.624 [mindspore/ccsrc/plugin/device/gpu/hal/device/gpu_device_manager.cc:78] ReleaseDevice] Op Error: Failed to destroy gpu memory allocator | Error Number: 0
+[ERROR] DEVICE(19348,7f33fb929740,python):2022-10-16-00:55:05.176.643 [mindspore/ccsrc/plugin/device/gpu/hal/device/cuda_driver.cc:48] FreeDeviceMem] cudaFree failed, ret[710], device-side assert triggered
+[ERROR] DEVICE(19348,7f33fb929740,python):2022-10-16-00:55:05.176.662 [mindspore/ccsrc/plugin/device/gpu/hal/device/gpu_memory_allocator.cc:71] Finalize] Could not free buffer queue memory.
+[ERROR] DEVICE(19348,7f33fb929740,python):2022-10-16-00:55:05.176.667 [mindspore/ccsrc/plugin/device/gpu/hal/device/gpu_device_manager.cc:78] ReleaseDevice] Op Error: Failed to destroy gpu memory allocator | Error Number: 0
+[ERROR] DEVICE(19346,7fd102254740,python):2022-10-16-00:55:05.176.920 [mindspore/ccsrc/plugin/device/gpu/hal/device/cuda_driver.cc:48] FreeDeviceMem] cudaFree failed, ret[710], device-side assert triggered
+[ERROR] DEVICE(19343,7f9034e62740,python):2022-10-16-00:55:05.176.922 [mindspore/ccsrc/plugin/device/gpu/hal/device/cuda_driver.cc:48] FreeDeviceMem] cudaFree failed, ret[710], device-side assert triggered
+[ERROR] DEVICE(19348,7f33fb929740,python):2022-10-16-00:55:05.176.974 [mindspore/ccsrc/plugin/device/gpu/hal/device/cuda_driver.cc:48] FreeDeviceMem] cudaFree failed, ret[710], device-side assert triggered
+Traceback (most recent call last):
+  File "train.py", line 193, in <module>
+    train(args)
+  File "train.py", line 189, in train
+    model.train(args.epoch_size, loader_train, callbacks=callbacks, dataset_sink_mode=args.dataset_sink_mode)
+  File "/root/anaconda3/lib/python3.7/site-packages/mindspore/train/model.py", line 1049, in train
+    initial_epoch=initial_epoch)
+  File "/root/anaconda3/lib/python3.7/site-packages/mindspore/train/model.py", line 98, in wrapper
+    func(self, *args, **kwargs)
+  File "/root/anaconda3/lib/python3.7/site-packages/mindspore/train/model.py", line 623, in _train
+    cb_params, sink_size, initial_epoch, valid_infos)
+  File "/root/anaconda3/lib/python3.7/site-packages/mindspore/train/model.py", line 724, in _train_dataset_sink_process
+    list_callback.on_train_epoch_end(run_context)
+  File "/root/anaconda3/lib/python3.7/site-packages/mindspore/train/callback/_callback.py", line 371, in on_train_epoch_end
+    cb.on_train_epoch_end(run_context)
+  File "/home/mindspore/jq/mindcv/mindcv/utils/callbacks.py", line 86, in on_train_epoch_end
+    res = self.apply_eval()
+  File "/home/mindspore/jq/mindcv/mindcv/utils/callbacks.py", line 67, in apply_eval
+    return self.model.eval(self.dataset_val, dataset_sink_mode=self.dataset_sink_mode)
+  File "/root/anaconda3/lib/python3.7/site-packages/mindspore/train/model.py", line 1424, in eval
+    eval_result = self._eval_dataset_sink_process(valid_dataset, list_callback, cb_params)
+  File "/root/anaconda3/lib/python3.7/site-packages/mindspore/train/model.py", line 1289, in _eval_dataset_sink_process
+    outputs = eval_network(*inputs)
+  File "/root/anaconda3/lib/python3.7/site-packages/mindspore/nn/cell.py", line 578, in __call__
+    out = self.compile_and_run(*args)
+  File "/root/anaconda3/lib/python3.7/site-packages/mindspore/nn/cell.py", line 988, in compile_and_run
+    return _cell_graph_executor(self, *new_inputs, phase=self.phase)
+  File "/root/anaconda3/lib/python3.7/site-packages/mindspore/common/api.py", line 1202, in __call__
+    return self.run(obj, *args, phase=phase)
+  File "/root/anaconda3/lib/python3.7/site-packages/mindspore/common/api.py", line 1239, in run
+    return self._exec_pip(obj, *args, phase=phase_real)
+  File "/root/anaconda3/lib/python3.7/site-packages/mindspore/common/api.py", line 98, in wrapper
+    results = fn(*arg, **kwargs)
+  File "/root/anaconda3/lib/python3.7/site-packages/mindspore/common/api.py", line 1221, in _exec_pip
+    return self._graph_executor(args, phase)
+RuntimeError: Sync stream failed:GPU_3
+
+----------------------------------------------------
+- C++ Call Stack: (For framework developers)
+----------------------------------------------------
+mindspore/ccsrc/runtime/graph_scheduler/graph_scheduler.cc:628 Run
+
+Error in atexit._run_exitfuncs:
+RuntimeError: Free device memory[0x7fcb86000000] error.
+
+----------------------------------------------------
+- C++ Call Stack: (For framework developers)
+----------------------------------------------------
+mindspore/ccsrc/common/mem_reuse/mem_dynamic_allocator.cc:428 operator()
+
+Traceback (most recent call last):
+  File "train.py", line 193, in <module>
+    train(args)
+  File "train.py", line 189, in train
+    model.train(args.epoch_size, loader_train, callbacks=callbacks, dataset_sink_mode=args.dataset_sink_mode)
+  File "/root/anaconda3/lib/python3.7/site-packages/mindspore/train/model.py", line 1049, in train
+    initial_epoch=initial_epoch)
+  File "/root/anaconda3/lib/python3.7/site-packages/mindspore/train/model.py", line 98, in wrapper
+    func(self, *args, **kwargs)
+  File "/root/anaconda3/lib/python3.7/site-packages/mindspore/train/model.py", line 623, in _train
+    cb_params, sink_size, initial_epoch, valid_infos)
+  File "/root/anaconda3/lib/python3.7/site-packages/mindspore/train/model.py", line 724, in _train_dataset_sink_process
+    list_callback.on_train_epoch_end(run_context)
+  File "/root/anaconda3/lib/python3.7/site-packages/mindspore/train/callback/_callback.py", line 371, in on_train_epoch_end
+    cb.on_train_epoch_end(run_context)
+  File "/home/mindspore/jq/mindcv/mindcv/utils/callbacks.py", line 86, in on_train_epoch_end
+    res = self.apply_eval()
+  File "/home/mindspore/jq/mindcv/mindcv/utils/callbacks.py", line 67, in apply_eval
+    return self.model.eval(self.dataset_val, dataset_sink_mode=self.dataset_sink_mode)
+  File "/root/anaconda3/lib/python3.7/site-packages/mindspore/train/model.py", line 1424, in eval
+    eval_result = self._eval_dataset_sink_process(valid_dataset, list_callback, cb_params)
+  File "/root/anaconda3/lib/python3.7/site-packages/mindspore/train/model.py", line 1289, in _eval_dataset_sink_process
+    outputs = eval_network(*inputs)
+  File "/root/anaconda3/lib/python3.7/site-packages/mindspore/nn/cell.py", line 578, in __call__
+    out = self.compile_and_run(*args)
+  File "/root/anaconda3/lib/python3.7/site-packages/mindspore/nn/cell.py", line 988, in compile_and_run
+    return _cell_graph_executor(self, *new_inputs, phase=self.phase)
+  File "/root/anaconda3/lib/python3.7/site-packages/mindspore/common/api.py", line 1202, in __call__
+    return self.run(obj, *args, phase=phase)
+  File "/root/anaconda3/lib/python3.7/site-packages/mindspore/common/api.py", line 1239, in run
+    return self._exec_pip(obj, *args, phase=phase_real)
+  File "/root/anaconda3/lib/python3.7/site-packages/mindspore/common/api.py", line 98, in wrapper
+    results = fn(*arg, **kwargs)
+  File "/root/anaconda3/lib/python3.7/site-packages/mindspore/common/api.py", line 1221, in _exec_pip
+    return self._graph_executor(args, phase)
+RuntimeError: Sync stream failed:GPU_0
+
+----------------------------------------------------
+- C++ Call Stack: (For framework developers)
+----------------------------------------------------
+mindspore/ccsrc/runtime/graph_scheduler/graph_scheduler.cc:628 Run
+
+Error in atexit._run_exitfuncs:
+RuntimeError: Free device memory[0x7f8aba000000] error.
+
+----------------------------------------------------
+- C++ Call Stack: (For framework developers)
+----------------------------------------------------
+mindspore/ccsrc/common/mem_reuse/mem_dynamic_allocator.cc:428 operator()
+
+Traceback (most recent call last):
+  File "train.py", line 193, in <module>
+    train(args)
+  File "train.py", line 189, in train
+    model.train(args.epoch_size, loader_train, callbacks=callbacks, dataset_sink_mode=args.dataset_sink_mode)
+  File "/root/anaconda3/lib/python3.7/site-packages/mindspore/train/model.py", line 1049, in train
+    initial_epoch=initial_epoch)
+  File "/root/anaconda3/lib/python3.7/site-packages/mindspore/train/model.py", line 98, in wrapper
+    func(self, *args, **kwargs)
+  File "/root/anaconda3/lib/python3.7/site-packages/mindspore/train/model.py", line 623, in _train
+    cb_params, sink_size, initial_epoch, valid_infos)
+  File "/root/anaconda3/lib/python3.7/site-packages/mindspore/train/model.py", line 724, in _train_dataset_sink_process
+    list_callback.on_train_epoch_end(run_context)
+  File "/root/anaconda3/lib/python3.7/site-packages/mindspore/train/callback/_callback.py", line 371, in on_train_epoch_end
+    cb.on_train_epoch_end(run_context)
+  File "/home/mindspore/jq/mindcv/mindcv/utils/callbacks.py", line 86, in on_train_epoch_end
+    res = self.apply_eval()
+  File "/home/mindspore/jq/mindcv/mindcv/utils/callbacks.py", line 67, in apply_eval
+    return self.model.eval(self.dataset_val, dataset_sink_mode=self.dataset_sink_mode)
+  File "/root/anaconda3/lib/python3.7/site-packages/mindspore/train/model.py", line 1424, in eval
+    eval_result = self._eval_dataset_sink_process(valid_dataset, list_callback, cb_params)
+  File "/root/anaconda3/lib/python3.7/site-packages/mindspore/train/model.py", line 1289, in _eval_dataset_sink_process
+    outputs = eval_network(*inputs)
+  File "/root/anaconda3/lib/python3.7/site-packages/mindspore/nn/cell.py", line 578, in __call__
+    out = self.compile_and_run(*args)
+  File "/root/anaconda3/lib/python3.7/site-packages/mindspore/nn/cell.py", line 988, in compile_and_run
+    return _cell_graph_executor(self, *new_inputs, phase=self.phase)
+  File "/root/anaconda3/lib/python3.7/site-packages/mindspore/common/api.py", line 1202, in __call__
+    return self.run(obj, *args, phase=phase)
+  File "/root/anaconda3/lib/python3.7/site-packages/mindspore/common/api.py", line 1239, in run
+    return self._exec_pip(obj, *args, phase=phase_real)
+  File "/root/anaconda3/lib/python3.7/site-packages/mindspore/common/api.py", line 98, in wrapper
+    results = fn(*arg, **kwargs)
+  File "/root/anaconda3/lib/python3.7/site-packages/mindspore/common/api.py", line 1221, in _exec_pip
+    return self._graph_executor(args, phase)
+RuntimeError: Sync stream failed:GPU_5
+
+----------------------------------------------------
+- C++ Call Stack: (For framework developers)
+----------------------------------------------------
+mindspore/ccsrc/runtime/graph_scheduler/graph_scheduler.cc:628 Run
+
+Error in atexit._run_exitfuncs:
+RuntimeError: Free device memory[0x7f2e94000000] error.
+
+----------------------------------------------------
+- C++ Call Stack: (For framework developers)
+----------------------------------------------------
+mindspore/ccsrc/common/mem_reuse/mem_dynamic_allocator.cc:428 operator()
+
+[ubuntu154:19346] *** Process received signal ***
+[ubuntu154:19346] Signal: Segmentation fault (11)
+[ubuntu154:19346] Signal code: Address not mapped (1)
+[ubuntu154:19346] Failing at address: 0xb8
+[ubuntu154:19346] [ 0] /lib/x86_64-linux-gnu/libpthread.so.0(+0x12980)[0x7fd101e35980]
+[ubuntu154:19346] [ 1] python(+0x1a170e)[0x55ad6528470e]
+[ubuntu154:19346] [ 2] /root/anaconda3/lib/python3.7/site-packages/mindspore/_c_expression.cpython-37m-x86_64-linux-gnu.so(+0x1a07f7b)[0x7fd0e4cc7f7b]
+[ubuntu154:19346] [ 3] /root/anaconda3/lib/python3.7/site-packages/mindspore/_c_expression.cpython-37m-x86_64-linux-gnu.so(_ZNSt23_Sp_counted_ptr_inplaceIN9mindspore9ValueNodeESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE10_M_disposeEv+0xb2)[0x7fd0e449dbe2]
+[ubuntu154:19346] [ 4] /root/anaconda3/lib/python3.7/site-packages/mindspore/_c_expression.cpython-37m-x86_64-linux-gnu.so(_ZNSt23_Sp_counted_ptr_inplaceIN9mindspore5CNodeESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE10_M_disposeEv+0x14a)[0x7fd0e4b3f68a]
+[ubuntu154:19346] [ 5] /root/anaconda3/lib/python3.7/site-packages/mindspore/_c_expression.cpython-37m-x86_64-linux-gnu.so(_ZNSt23_Sp_counted_ptr_inplaceIN9mindspore5CNodeESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE10_M_disposeEv+0x14a)[0x7fd0e4b3f68a]
+[ubuntu154:19346] [ 6] /root/anaconda3/lib/python3.7/site-packages/mindspore/_c_expression.cpython-37m-x86_64-linux-gnu.so(_ZNSt23_Sp_counted_ptr_inplaceIN9mindspore5CNodeESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE10_M_disposeEv+0x14a)[0x7fd0e4b3f68a]
+[ubuntu154:19346] [ 7] /root/anaconda3/lib/python3.7/site-packages/mindspore/_c_expression.cpython-37m-x86_64-linux-gnu.so(_ZNSt23_Sp_counted_ptr_inplaceIN9mindspore5CNodeESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE10_M_disposeEv+0x14a)[0x7fd0e4b3f68a]
+[ubuntu154:19346] [ 8] /root/anaconda3/lib/python3.7/site-packages/mindspore/_c_expression.cpython-37m-x86_64-linux-gnu.so(_ZNSt23_Sp_counted_ptr_inplaceIN9mindspore5CNodeESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE10_M_disposeEv+0x14a)[0x7fd0e4b3f68a]
+[ubuntu154:19346] [ 9] /root/anaconda3/lib/python3.7/site-packages/mindspore/_c_expression.cpython-37m-x86_64-linux-gnu.so(_ZNSt23_Sp_counted_ptr_inplaceIN9mindspore5CNodeESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE10_M_disposeEv+0x14a)[0x7fd0e4b3f68a]
+[ubuntu154:19346] [10] /root/anaconda3/lib/python3.7/site-packages/mindspore/_c_expression.cpython-37m-x86_64-linux-gnu.so(_ZNSt23_Sp_counted_ptr_inplaceIN9mindspore5CNodeESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE10_M_disposeEv+0x14a)[0x7fd0e4b3f68a]
+[ubuntu154:19346] [11] /root/anaconda3/lib/python3.7/site-packages/mindspore/_c_expression.cpython-37m-x86_64-linux-gnu.so(_ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE10_M_releaseEv+0x66)[0x7fd0e43f0f96]
+[ubuntu154:19346] [12] /root/anaconda3/lib/python3.7/site-packages/mindspore/_c_expression.cpython-37m-x86_64-linux-gnu.so(_ZN9mindspore9FuncGraphD2Ev+0x258)[0x7fd0e4cc16d8]
+[ubuntu154:19346] [13] /root/anaconda3/lib/python3.7/site-packages/mindspore/_c_expression.cpython-37m-x86_64-linux-gnu.so(_ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE10_M_releaseEv+0x66)[0x7fd0e43f0f96]
+[ubuntu154:19346] [14] /root/anaconda3/lib/python3.7/site-packages/mindspore/_c_expression.cpython-37m-x86_64-linux-gnu.so(+0x17ac00d)[0x7fd0e4a6c00d]
+[ubuntu154:19346] [15] /root/anaconda3/lib/python3.7/site-packages/mindspore/_c_expression.cpython-37m-x86_64-linux-gnu.so(+0x17aa8f2)[0x7fd0e4a6a8f2]
+[ubuntu154:19346] [16] /lib/x86_64-linux-gnu/libc.so.6(+0x43031)[0x7fd101a75031]
+[ubuntu154:19346] [17] /lib/x86_64-linux-gnu/libc.so.6(+0x4312a)[0x7fd101a7512a]
+[ubuntu154:19346] [18] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xee)[0x7fd101a53c8e]
+[ubuntu154:19346] [19] python(+0x1daf7d)[0x55ad652bdf7d]
+[ubuntu154:19346] *** End of error message ***
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+/root/anaconda3/lib/python3.7/multiprocessing/semaphore_tracker.py:144: UserWarning: semaphore_tracker: There appear to be 4 leaked semaphores to clean up at shutdown
+  len(cache))
+/root/anaconda3/lib/python3.7/multiprocessing/semaphore_tracker.py:144: UserWarning: semaphore_tracker: There appear to be 4 leaked semaphores to clean up at shutdown
+  len(cache))
+/root/anaconda3/lib/python3.7/multiprocessing/semaphore_tracker.py:144: UserWarning: semaphore_tracker: There appear to be 4 leaked semaphores to clean up at shutdown
+  len(cache))
+/root/anaconda3/lib/python3.7/multiprocessing/semaphore_tracker.py:144: UserWarning: semaphore_tracker: There appear to be 4 leaked semaphores to clean up at shutdown
+  len(cache))
+/root/anaconda3/lib/python3.7/multiprocessing/semaphore_tracker.py:144: UserWarning: semaphore_tracker: There appear to be 4 leaked semaphores to clean up at shutdown
+  len(cache))
+--------------------------------------------------------------------------
+mpirun noticed that process rank 3 with PID 0 on node ubuntu154 exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
