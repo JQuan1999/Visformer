@@ -2,6 +2,7 @@
 MindSpore implementation of `Visformer`.
 Refer to: Visformer: The Vision-friendly Transformer
 """
+
 from typing import List
 import numpy as np
 
@@ -51,6 +52,8 @@ class LayerNorm(nn.LayerNorm):
 
 
 class BatchNorm(nn.Cell):
+    """BatchNorm"""
+
     def __init__(self, dim):
         super(BatchNorm, self).__init__()
         self.bn = nn.BatchNorm2d(dim, eps=1e-5, momentum=0.9)
@@ -61,6 +64,7 @@ class BatchNorm(nn.Cell):
 
 
 class Mlp(nn.Cell):
+
     def __init__(self, in_features: int,
                  hidden_features: int = None,
                  out_features: int = None,
@@ -104,6 +108,7 @@ class Mlp(nn.Cell):
 
 
 class Attention(nn.Cell):
+
     def __init__(self,
                  dim: int,
                  num_heads: int = 8,
@@ -128,15 +133,16 @@ class Attention(nn.Cell):
 
     def construct(self, x: Tensor):
         B, C, H, W = x.shape
-        qkv = self.qkv(x).reshape((-1, 3, self.num_heads, self.head_dim, H, W))
-        qkv = qkv.transpose((1, 0, 2, 4, 5, 3)).reshape((3, B, self.num_heads, -1, self.head_dim))
+        x = self.qkv(x)
+        qkv = ops.reshape(x, (B, 3, self.num_heads, self.head_dim, H*W))
+        qkv = qkv.transpose((1, 0, 2, 4, 3))
         q, k, v = qkv[0], qkv[1], qkv[2]
         attn = ops.matmul(q * self.scale, k.transpose(0, 1, 3, 2) * self.scale)
         attn = ops.Softmax(axis=-1)(attn)
         attn = self.attn_drop(attn)
         x = ops.matmul(attn, v)
 
-        x = x.transpose((0, 1, 3, 2)).reshape((B, -1, H * W)).reshape((B, C, H, W))
+        x = x.transpose((0, 1, 3, 2)).reshape((B, -1, H, W))
         x = self.proj(x)
         x = self.proj_drop(x)
 
@@ -144,6 +150,7 @@ class Attention(nn.Cell):
 
 
 class Block(nn.Cell):
+
     def __init__(self,
                  dim: int,
                  num_heads: int,
@@ -155,7 +162,7 @@ class Block(nn.Cell):
                  attn_drop: float = 0.,
                  drop_path: float = 0.,
                  act_layer: nn.Cell = nn.GELU,
-                 norm_layer: LayerNorm = LayerNorm,
+                 norm_layer: BatchNorm = BatchNorm,
                  group: int = 8,
                  attn_disabled: bool = False,
                  spatial_conv: bool = False):
@@ -181,6 +188,7 @@ class Block(nn.Cell):
 
 
 class PatchEmbed(nn.Cell):
+
     def __init__(self,
                  img_size: int = 224,
                  patch_size: int = 16,
@@ -202,9 +210,6 @@ class PatchEmbed(nn.Cell):
             self.norm = norm_layer(embed_dim)
 
     def construct(self, x: Tensor):
-        B, C, H, W = x.shape
-        if H != self.img_size[0] and W != self.img_size[1]:
-            raise Exception(f"Input image size ({H}*{W}) does not match model ({self.img_size[1]}*{self.img_size[1]}).")
         x = self.proj(x)
         if self.norm_pe:
             x = self.norm(x)
@@ -212,6 +217,7 @@ class PatchEmbed(nn.Cell):
 
 
 class Visformer(nn.Cell):
+
     def __init__(self,
                  img_size: int = 224,
                  init_channels: int = 32,
@@ -221,11 +227,11 @@ class Visformer(nn.Cell):
                  num_heads: List[int] = None,
                  mlp_ratio: float = 4.,
                  qkv_bias: bool = False,
-                 qk_scale: bool = None,
+                 qk_scale: float = None,
                  drop_rate: float = 0.,
                  attn_drop_rate: float = 0.,
                  drop_path_rate: float = 0.,
-                 norm_layer: LayerNorm = LayerNorm,
+                 norm_layer: BatchNorm = BatchNorm,
                  attn_stage: str = '1111',
                  pos_embed: bool = True,
                  spatial_conv: str = '1111',
@@ -419,9 +425,8 @@ def visformer_tiny(pretrained: bool = False,
                    **kwargs):
     default_cfg = default_cfgs['visformer_tiny']
     model = Visformer(img_size=224, init_channels=16, embed_dim=192, depth=[0, 7, 4, 4], num_heads=[3, 3, 3, 3],
-                      mlp_ratio=4.,
-                      group=8, attn_stage='0011', spatial_conv='1100', norm_layer=BatchNorm, conv_init=True,
-                      embedding_norm=BatchNorm, **kwargs)
+                      mlp_ratio=4., group=8, attn_stage='0011', spatial_conv='1100', norm_layer=BatchNorm,
+                      drop_path_rate=0.03, conv_init=True, embedding_norm=BatchNorm, **kwargs)
     if pretrained:
         load_pretrained(model, default_cfg, num_classes=num_classes, in_channels=in_channels)
 
@@ -435,9 +440,8 @@ def visformer_small(pretrained: bool = False,
                     **kwargs):
     default_cfg = default_cfgs['visformer_small']
     model = Visformer(img_size=224, init_channels=32, embed_dim=384, depth=[0, 7, 4, 4], num_heads=[6, 6, 6, 6],
-                      mlp_ratio=4.,
-                      group=8, attn_stage='0011', spatial_conv='1100', norm_layer=BatchNorm, conv_init=True,
-                      embedding_norm=BatchNorm, **kwargs)
+                      mlp_ratio=4., group=8, attn_stage='0011', spatial_conv='1100', norm_layer=BatchNorm,
+                      conv_init=True, embedding_norm=BatchNorm, **kwargs)
     if pretrained:
         load_pretrained(model, default_cfg, num_classes=num_classes, in_channels=in_channels)
     return model
@@ -450,8 +454,8 @@ def visformer_small_v2(pretrained: bool = False,
                        **kwargs):
     default_cfg = default_cfgs['visformer_small_v2']
     model = Visformer(img_size=224, init_channels=32, embed_dim=256, depth=[1, 10, 14, 3], num_heads=[2, 4, 8, 16],
-                      mlp_ratio=4., group=8, attn_stage='0011', spatial_conv='1100', norm_layer=BatchNorm,
-                      conv_init=True, embedding_norm=BatchNorm, **kwargs)
+                      mlp_ratio=4., qk_scale=-0.5, group=8, attn_stage='0011', spatial_conv='1100',
+                      norm_layer=BatchNorm, conv_init=True, embedding_norm=BatchNorm, **kwargs)
     if pretrained:
         load_pretrained(model, default_cfg, num_classes=num_classes, in_channels=in_channels)
     return model
@@ -463,9 +467,9 @@ def visformer_tiny_v2(pretrained: bool = False,
                       in_channels: int = 3,
                       **kwargs):
     default_cfg = default_cfgs['visformer_tiny_v2']
-    model = Visformer(img_size=224, init_channels=24, embed_dim=192, depth=[1, 4, 6, 2], num_heads=[1, 3, 6, 12],
-                      mlp_ratio=4., group=8, attn_stage='0011', spatial_conv='1100', norm_layer=BatchNorm,
-                      conv_init=True, embedding_norm=BatchNorm, **kwargs)
+    model = Visformer(img_size=224, init_channels=24, embed_dim=192, depth=[1, 4, 6, 3], num_heads=[1, 3, 6, 12],
+                      mlp_ratio=4., qk_scale=-0.5, group=8, attn_stage='0011', spatial_conv='1100',
+                      norm_layer=BatchNorm, drop_path_rate=0.03, conv_init=True, embedding_norm=BatchNorm, **kwargs)
     if pretrained:
         load_pretrained(model, default_cfg, num_classes=num_classes, in_channels=in_channels)
     return model
